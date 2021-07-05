@@ -3,7 +3,7 @@
 
 This Hexadecimal 16x16 solver uses AI to speed the process of finding a solution. 
 
-[](https://ibb.co/X7Y0VjR)
+![hexadoku solver](https://ibb.co/X7Y0VjR)
 
 ## Usage
 
