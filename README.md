@@ -16,6 +16,7 @@ yarn start
 ```
 
 ## Send execution proof to smart contract
+This step is optional.
 Export the private key of an address with some faucet-eth on rinkeby network.
 
 ```shell
