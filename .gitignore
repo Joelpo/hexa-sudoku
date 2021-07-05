@@ -1,3 +1,4 @@
 app/node_modules/
 core/node_modules/
 node_modules/
+.DS_Store
