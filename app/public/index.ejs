@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="icon" href="exaion_logo.png">
+  <!-- Custom styles for this template -->
+</head>
+<body class="text-center">
+
+    <center>
+        <br>
+    <img class="mb-4" src="exaion_logo.png" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Hexadecimal Sudoku Solver</h1>
+    <p>This solver uses AI to speed the solving process and should be able to solve very hard puzzles. </p>
+    <p>Test it out using your hardest 16x16 hexa sudoku !</p>
+    <br>
+    <div class="container">
+        <table id="grid">
+          <tr>
+          <% const Nrows = Math.sqrt(solvedSudoku.length)%>
+          <% var bgColor %>
+          <% for (var i = 0; i < Nrows; i++) { %>
+            <tr> 
+            <% for (var j = 0; j < Nrows; j++) { %>
+              <% if (initialSudoku[j + i*Nrows] != solvedSudoku[j + i*Nrows]) {bgColor="#90ee90"} else {bgColor="#ffffff"}%>
+              <td bgcolor="<%=bgColor%>"><%= solvedSudoku[j + i*Nrows] %></td>
+            <% } %>
+            </tr>
+          <% } %>
+        </tr>
+         
+        </table>
+        </div>
+      </br>
+        <p>Solved in : <%= parseFloat(time).toFixed(2) %> Seconds</p>
+        <p class="mt-5 mb-3 text-muted">&copy; Exaion 2021</p>
+
+    </center>
+</body>
+<footer>
+</footer>
+
+
+<style>
+  table { border-collapse: collapse; font-family: Calibri, sans-serif; }
+  colgroup, tbody { border: solid medium; }
+  td { border: solid thin; height: 1.4em; width: 1.4em; text-align: center; padding: 0; }
+</style>
