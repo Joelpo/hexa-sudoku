@@ -57,7 +57,9 @@ app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/
     }
 
     // setnTx of proof of execution to blockchain
-    // sendExecutionProof(time)
+    if (ACCOUNT_PRIVATE_KEYS){
+        sendExecutionProof(time)
+    }
  });  
  app.get('/:sudoku', (req, res) => {
     res.redirect(`/solve/${req.params.sudoku}`);
