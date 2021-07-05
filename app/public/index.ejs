@@ -6,8 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
   <link rel="icon" href="exaion_logo.png">
   <!-- Custom styles for this template -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
 </head>
 <body class="text-center">
 
@@ -16,8 +20,12 @@
     <img class="mb-4" src="exaion_logo.png" alt="" width="72" height="72">
     <h1 class="h3 mb-3 font-weight-normal">Hexadecimal Sudoku Solver</h1>
     <p>This solver uses AI to speed the solving process and should be able to solve very hard puzzles. </p>
-    <p>Test it out using your hardest 16x16 hexa sudoku !</p>
-    <br>
+    <p>Try using your hardest 16x16 hexa sudoku !</p>
+    <a href="/solve/EBxF3xxxx6xxxx4xxC8xxxx5x0xxx6xxx5xxxxxD4ExxxA90xxxx1x4xFxACxxxxx14Bx02C5xEx38AxxAxxxxxB0xx47xxxxx5ExxF1D36B9xxxxxxxx3xxxxxxxE5xxxxxxxxEAxx78x1xxFxD8xx0xxx2xxExBxx7x2xxE9xxxxFxCx6xx9xxxx5xxxxxxxxxEBDx8xF0xxx1xxxxxxxxCxx6xxxDxxx42xxAxxDxE7x5x8xxxxx32x7xxxx6">Puzzle 1</a> |
+    <a href="/solve/x2xxx6xxxxxBxF31xxx6x3xB7xx9xx8x5x4Bx2FxxxxA0xCxxxxFDx59x2xxxxxxxxxxxF6x0xExx2xxxxxDxxxx53FCx4xx6xxxxxx51xxD9xxCx5x314xCxx8xxxxxxxxxx89x4Ax7xDxxxDxxx0xxxE5xxxF4xxxx5xxDx83xxx6xxxxExBxxxxx1x8xxxxFxBxxx87A356xxxxx1xAx3xxxxxxDEA0xxxDExxx2xxxxxxxxxxxx4xxxx29xx">Puzzle 2</a> | 
+    <a href="/solve/0xxxxxBA3X68X5XXXXBX9XDXFX0X4XXXXXXXXXFXXXXADX13XX3X7XXXXXCXXXEXDXX3XF8XXCX2XEXXC21XXXXB8XD5XXXX9XX86XXCXXAFXX74X0XX1XAXX4XXXX8DXXX6XXXXXEXXX397FEXXXX97XXXC5X6AXX9AXXXXBXXX8XDC8XXXDXCXXAXXXXFBXXXXXX5XXXXXXXCXXXX7CAXDX6EXXX3X1CX0EXXXD7XXA9XFEX4XX7XFXX5XX0XX">Puzzle 3</a>
+
+    <!-- <br> -->
     <div class="container">
         <table id="grid">
           <tr>
@@ -36,12 +44,13 @@
         </table>
         </div>
       </br>
-        <p>Solved in : <%= parseFloat(time).toFixed(2) %> Seconds</p>
-        <p class="mt-5 mb-3 text-muted">&copy; Exaion 2021</p>
+        <p><i>Solved in: <%= parseFloat(time).toFixed(2) %> Seconds</i></p>
+      <!-- </br> -->
 
     </center>
 </body>
 <footer>
+  <p class="mt-5 mb-3 text-muted">&copy; Exaion 2021</p>
 </footer>
 
 
