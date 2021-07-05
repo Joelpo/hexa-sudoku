@@ -8,7 +8,7 @@ https://rinkeby.etherscan.io/address/0x6186df72515ab027b78204ef66dec3f269499764
 
 ## Usage
 
-```
+```shell
 git clone https://github.com/Joelpo/hexa-sudoku
 
 cd app
