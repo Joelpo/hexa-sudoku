@@ -14,7 +14,7 @@ var exec = require('sync-exec');
 // Address of smart contract
 const contractAddress = '0x6186DF72515Ab027B78204Ef66dEc3F269499764'
 const INFURA_ENDPOINT = 'https://rinkeby.infura.io/v3/1f9c639597de4aa7b7570d6d9c421026'
-
+const DEFAULT_SUDOKU = '0xxxxxBA3X68X5XXXXBX9XDXFX0X4XXXXXXXXXFXXXXADX13XX3X7XXXXXCXXXEXDXX3XF8XXCX2XEXXC21XXXXB8XD5XXXX9XX86XXCXXAFXX74X0XX1XAXX4XXXX8DXXX6XXXXXEXXX397FEXXXX97XXXC5X6AXX9AXXXXBXXX8XDC8XXXDXCXXAXXXXFBXXXXXX5XXXXXXXCXXXX7CAXDX6EXXX3X1CX0EXXXD7XXA9XFEX4XX7XFXX5XX0XX'
 /**
  * App Variables
  */
@@ -61,8 +61,13 @@ app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/
         sendExecutionProof(time)
     }
  });  
- app.get('/:sudoku', (req, res) => {
-    res.redirect(`/solve/${req.params.sudoku}`);
+ app.get('/:sudoku?', (req, res) => {
+    var sudoku = req.params.sudoku
+    if (typeof sudoku == 'undefined'){
+        // load a default sudoku string
+        sudoku = DEFAULT_SUDOKU
+    }
+    res.redirect(`/solve/${sudoku}`);
  })
 
 /**
