@@ -50,7 +50,7 @@ app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/
             // send data to browser
             res.render(__dirname + '/public/index.ejs', {solvedSudoku:solvedSudoku, time:time, initialSudoku:initialSudoku})
         } catch (error) {
-            res.send("Url format not supported")
+            res.send("Url format not supported " + error)
         }
     } else {
         res.send("Url format not supported. Input Length : " + initialSudoku.length)
