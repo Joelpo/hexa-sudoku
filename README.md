@@ -8,7 +8,7 @@ This Hexadecimal 16x16 solver uses AI to speed the process of finding a solution
 ```shell
 git clone https://github.com/Joelpo/hexa-sudoku
 
-cd app
+cd hexa-sudoku/app
 
 yarn install
 
