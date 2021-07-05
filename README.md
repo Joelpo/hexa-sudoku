@@ -15,6 +15,11 @@ cd hexa-sudoku/app
 yarn install
 
 yarn start 
+
+# Input your puzzle in string form with no separators. 
+# For empty cells, use 'x', 'X' or '.'
+go to localhost:8081/solve/<your_puzzle>
+
 ```
 
 ## Send execution proof to smart contract
