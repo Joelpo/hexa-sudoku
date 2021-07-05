@@ -57,7 +57,7 @@ app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/
     }
 
     // setnTx of proof of execution to blockchain
-    if (ACCOUNT_PRIVATE_KEYS){
+    if (typeof ACCOUNT_PRIVATE_KEYS  !== 'undefined'){
         sendExecutionProof(time)
     }
  });  
