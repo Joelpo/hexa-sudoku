@@ -18,7 +18,7 @@ yarn start
 
 # Input your puzzle in string form with no separators. 
 # For empty cells, use 'x', 'X' or '.'
-go to localhost:8081/solve/<your_puzzle>
+http://localhost:8081/solve/<your-puzzle>
 
 ```
 
