@@ -478,12 +478,10 @@ def sudoku(input):
             break
 
     ans = 1
-    if x == 0:
-        bvbbb = 0 # hacky fix, we're good
-    else:
+    if x != 0:
         ans = backtracking()
     if ans == -1:
-        print "No solution for sudoku"
+        print("No solution for sudoku")
     end = timeit.default_timer()
     return (display(value), end - start)
     # print "Time taken =", end - start
