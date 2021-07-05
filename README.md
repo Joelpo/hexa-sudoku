@@ -15,7 +15,16 @@ yarn install
 yarn start 
 ```
 
-If you export your private key (export ACCOUNT_PRIVATE_KEYS="0x782...") with some faucet-eth on rinkeby network, it'll send a tx to store an execution proof (containing execution time) in the blockchain via this smart contract :
+## Send execution proof to smart contract
+This step is optional.
+Export the private key of an address with some faucet-eth on rinkeby network.
+
+```shell
+export ACCOUNT_PRIVATE_KEYS="0x782..."
+```
+
+Node backend will send a tx to store an execution proof (containing execution time) in the blockchain every time a puzzle is solved. 
+Execution proofs are stored in storage of this smart contract. 
 https://rinkeby.etherscan.io/address/0x6186df72515ab027b78204ef66dec3f269499764
 
 ## Example hexadoku puzzles
